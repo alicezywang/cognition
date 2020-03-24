@@ -1,0 +1,2 @@
+string LogLevel
+string LogMessages

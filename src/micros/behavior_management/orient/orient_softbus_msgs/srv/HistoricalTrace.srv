@@ -1,0 +1,16 @@
+# two parts: a request and a response. The two parts are separated by a '---'
+
+string time_begin
+string time_end
+
+geographic_msgs/GeoPoint point_start
+geographic_msgs/GeoPoint point_end
+
+float32 aspect_ratio_min
+float32 aspect_ratio_max
+
+float64 area_min
+float64 area_max
+
+---
+orient_softbus_msgs/traceToStation[] result

@@ -1,0 +1,30 @@
+rosrun image_transport_tutorial image_publisher /home/sha/documents/test_images/
+
+rosrun image_transport_tutorial camera_publisher 0 //0代表默认摄像头,如果有多个摄像头,则第二个是1,依次类推.
+
+
+/*显示图片*/
+rosrun image_view image_view image:=/ImagequeryResult
+
+rosrun image_view image_view image:=/camera/image/ image_transport:='compressed'
+
+/cam0/image_raw
+/**查看视频流**/
+rosrun uvc_camera uvc_camera_node
+rosrun image_view image_view image:=/image_raw
+
+/*extract_images*/
+image_saver node provide very similar functionalities, such as providing service call to trigger the node to save images, save images other than Jpeg format, etc.
+Subscribed Topics
+这个工具运行你从流（ROS sensor_msgs/Image topic）中将图片保存为jpg/png到一个文件夹。
+
+image (sensor_msgs/Image)
+        The image topic. Should be remapped to the name of the real image topic.
+Parameters
+
+~filename_format (string, default: frame%04d.jpg)
+        File name for saved images, you must add use '%04i' for sequence number.
+~sec_per_frame (double, default: '0.1')
+        set sec per frame value.
+
+

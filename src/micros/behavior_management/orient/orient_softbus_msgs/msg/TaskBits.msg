@@ -1,0 +1,2 @@
+string xmlStr
+string bitsStr

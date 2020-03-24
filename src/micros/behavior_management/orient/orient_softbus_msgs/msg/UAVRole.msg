@@ -1,0 +1,2 @@
+string roleName
+string[] UAVNames

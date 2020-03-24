@@ -1,0 +1,16 @@
+int32 status_word 
+float32 longitude 
+float32 latitude  
+float32 altitude 
+float32 roll_angle
+float32 pitch_angle 
+float32 yaw_angle 
+float32 angular_rate_x  
+float32 angular_rate_y  
+float32 angular_rate_z 
+float32 north_direction_speed  
+float32 east_direction_speed 
+float32 ground_direction_speed  
+float32 acceleration_x
+float32 acceleration_y
+float32 acceleration_z

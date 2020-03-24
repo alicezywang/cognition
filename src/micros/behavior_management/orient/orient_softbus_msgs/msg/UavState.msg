@@ -1,0 +1,9 @@
+int32 swarmID
+string taskName
+string actorName
+int32 robotID
+string timeStamp
+geometry_msgs/Pose robotPose
+geometry_msgs/Pose sensorPose
+string dataType
+State data
