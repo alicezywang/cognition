@@ -1,0 +1,62 @@
+#!/bin/bash
+dependency_root_path_=. #cognition
+#dependency_root_path_=../../../dependency #micros1.0beta
+arch_=$(arch)
+target_=""
+if [ "${arch_}"x = "x86_64"x ];then
+    echo "检测到x86_64运行环境..."
+    target_=$dependency_root_path_/amd64
+else #elif 
+    echo "检测到非x86_64运行环境..."
+    target_=$dependency_root_path_/arm64
+fi
+
+if [ -d "/usr/local/cuda-9.0/" ];then
+    echo "检测到cuda-9.0运行环境：/usr/local/cuda-9.0/"
+else #elif
+    if [ "${arch_}"x = "x86_64"x ];then
+        echo "检测到非cuda-9.0运行环境，正在执行cuda-9.0-amd64安装..."
+        sudo dpkg -i $target_/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
+        sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
+        sudo apt-get update
+        sudo apt-get install cuda​-9-0 
+        tar xvzf $target_/cudnn-9.0-linux-x64-v7.6.5.32.tgz -C $target_/cuda/
+        sudo cp $target_/cuda/include/cudnn.h /usr/local/cuda/include
+        sudo cp $target_/cuda/lib64/libcudnn* /usr/local/cuda/lib64
+        sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+    else 
+        echo "检测到非cuda-9.0运行环境，正在执行cuda-9.0-arm64安装..."
+        sudo dpkg -i $target_/cuda-repo-l4t-9-0-local_9.0.252-1_arm64.deb
+        sudo apt-get update
+        sudo apt-get install cuda-9-0
+        sudo dpkg -i $target_/libcudnn7_7.1.5.14-1+cuda9.0_arm64.deb
+        sudo dpkg -i $target_/libcudnn7-dev_7.1.5.14-1+cuda9.0_arm64.deb
+        sudo dpkg -i $target_/libcudnn7-doc_7.1.5.14-1+cuda9.0_arm64.deb
+    fi
+    echo "CUDA install successful!"
+fi
+
+
+if [ -d "../../src/" ];then
+    echo "检测到工作空间src目录，正在执行安装..."
+    mkdir -p ../../devel/
+    if [ -d "$target_/installed/" ];then
+        if [ -d "../../devel/third_party" ];then
+            echo "Cognition RunTime-Lib 已安装，请勿重试!"
+        else
+            ln -s $(pwd)/$target_/installed/ ../../devel/third_party
+        fi
+    else
+        # other dependency
+        sudo apt-get install libgoogle-glog-dev
+        # cognition dependency
+        mkdir -p $target_/installed/
+        for tar in $target_/*.tar.gz;  do tar zxvf $tar -C $target_/installed/; done
+        ln -s $(pwd)/$target_/installed/ ../../devel/third_party
+    fi
+    echo " "
+    echo "Cognition RunTime-Lib Setup Sucessed !"
+else
+    echo "未检测到工作空间下的src目录，请将third_party放于在src目录后，重试此操作"
+fi
+
