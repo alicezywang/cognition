@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model_meta id="MobileNetSSD_Car_003">
+        <train_framework>tensorflow</train_framework>
+        <confidence>0.8</confidence>
+        <developer>Observe</developer>
+        <root_path>~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD</root_path>
+        <who>
+            <sensor_type>visible</sensor_type>
+            <cpu_info>cpu</cpu_info>
+            <memory_info>0</memory_info>
+        </who>
+        <where>
+            <field>air</field>
+            <period>day</period>
+        </where>
+        <what>
+            <task_type>Detection</task_type>
+            <target_category>Car</target_category>
+            <target_status>static</target_status>
+            <target_pose>60</target_pose>
+        </what>
+    </model_meta>
+</models>
