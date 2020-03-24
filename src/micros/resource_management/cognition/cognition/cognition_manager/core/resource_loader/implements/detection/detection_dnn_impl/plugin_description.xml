@@ -1,5 +1,0 @@
-<library path="lib/libdetection_dnn_impl">
-  <class type="cognition_bus::DetectionDNNImpl" base_class_type="cognition_bus::SoftBusBase">
-    <description>This is a detection_dnn_impl plugin.</description>
-  </class>
-</library>

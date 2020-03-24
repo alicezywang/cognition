@@ -1,5 +1,0 @@
-<library path="lib/libdetection_tf_impl">
-  <class type="cognition_bus::DetectionTFImpl" base_class_type="cognition_bus::SoftBusBase">
-    <description>This is a detection_tf_impl plugin.</description>
-  </class>
-</library>

@@ -1,5 +1,0 @@
-<library path="lib/libdetection_tensorrt_impl">
-  <class type="cognition_bus::DetectionTensorRTImpl" base_class_type="cognition_bus::SoftBusBase">
-    <description>This is a detection_tensorrt_impl plugin.</description>
-  </class>
-</library>

@@ -1,6 +1,0 @@
-MobileNetSSD_Car_001,caffe,0.850000,Observe,~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD,visible,gpu,0,air,day,Detection,Car,static,60.000000
-MobileNetSSD_plane_002,caffe,0.810000,observe,~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD,infrared,gpu,0,air,night,Detection,Plane,dynamic,40.000000
-FasterRCNN_plane_002,tensorflow,0.810000,observe,~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD,infrared,gpu,0,air,night,Detection,Plane,static,40.000000
-MobileNetSSD_Car_003,tensorflow,0.800000,Observe,~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD,visible,cpu,0,air,day,Detection,Car,static,60.000000
-Fastrcnn_Car_003,tensorflow,0.800000,Observe,~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD,visible,cpu,0,air,day,Detection,Car,static,60.000000
-FasterRCNN_Car_001,tensorflow,0.800000,Observe,~\cognition_resource\algorithm_lib\pretrained_model\MobileNetSSD,visible,gpu,0,air,day,Detection,Car,static,60.000000
