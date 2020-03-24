@@ -1,0 +1,6 @@
+string id
+string task_topic
+string state_topic
+string actorName
+---
+bool bind

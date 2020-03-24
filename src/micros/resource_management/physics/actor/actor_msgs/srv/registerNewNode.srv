@@ -1,0 +1,8 @@
+string actor_match_service
+string actor_bind_service
+string actor_unbind_service
+string get_platform_actor_name_service
+string get_sensor_actor_topic_service
+string get_platform_swarm_info_service
+---
+bool result
