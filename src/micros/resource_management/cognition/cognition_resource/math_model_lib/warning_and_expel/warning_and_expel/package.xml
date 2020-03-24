@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>warning_and_expel</name>
+  <version>0.0.0</version>
+  <description>The img_sonar_core package</description>
+
+  <maintainer email="my_camphor_tree@163.com">Camphor</maintainer>
+  <license>BSD</license>
+  <author email="my_camphor_tree@163.com">Camphor</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <test_depend>boost</test_depend>
+
+</package>

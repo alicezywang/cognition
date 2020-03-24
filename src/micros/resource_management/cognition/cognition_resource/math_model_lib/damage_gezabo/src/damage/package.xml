@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>damage</name>
+  <version>0.0.0</version>
+  <description>The damage package</description>
+
+  <maintainer email="qiangjuanhuang@foxmail.com">Camphor</maintainer>
+  <license>BSD</license>
+  <author email="qiangjuanhuang@foxmail.com">Camphor</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <test_depend>boost</test_depend>
+
+</package>
