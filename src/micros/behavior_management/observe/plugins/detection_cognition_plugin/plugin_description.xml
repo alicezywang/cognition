@@ -1,4 +1,4 @@
-<library path="lib/lib—_detection_cognition_plugin">
+<library path="lib/libdetection_cognition_plugin">
   <class type="observe_softbus::DetectionCognTest" base_class_type="general_bus::GeneralPlugin">
     <description>This is a observe_softbus plugin based on cognition.</description>
   </class>
