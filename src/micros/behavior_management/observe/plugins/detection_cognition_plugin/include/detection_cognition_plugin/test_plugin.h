@@ -19,7 +19,7 @@
 #include <cognition/cognition.h>
 
 /**
- * @brief namespace orient_softbus
+ * @brief namespace observe_softbus
  */
 namespace observe_softbus {
 using namespace std;
