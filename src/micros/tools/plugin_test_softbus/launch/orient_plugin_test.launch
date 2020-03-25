@@ -1,7 +1,0 @@
-<launch>
-
-    <node name="plugin_test" pkg="plugin_test_softbus" type="plugin_test_softbus_node" output="screen">
-          <param name="pluginName" value="orient_softbus::FasterRcnnCognTest" />
-    </node>
-
-</launch>

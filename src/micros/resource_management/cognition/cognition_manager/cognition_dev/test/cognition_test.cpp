@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 //TEST 2:
     cognition::task_description task;
     //paremeters from task_interface
-    task.task_inf.task_id="001";
+    task.task_inf.task_id="001";    //WASM
     task.task_inf.task_type = "Detection";    
     task.task_inf.battle_field = "air";  
     task.task_inf.target_category = "car";  

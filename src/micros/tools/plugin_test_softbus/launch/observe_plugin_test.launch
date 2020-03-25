@@ -1,7 +1,7 @@
 <launch>
 
     <node name="plugin_test" pkg="plugin_test_softbus" type="plugin_test_softbus_node" output="screen">
-          <param name="pluginName" value="observe_softbus::TensorRTCognTest" />
+          <param name="pluginName" value="observe_softbus::DetectionCognTest" />
     </node>
 
 </launch>

@@ -1,5 +1,0 @@
-<library path="lib/libtensorrt_cognition_plugin">
-  <class type="observe_softbus::TensorRTCognTest" base_class_type="general_bus::GeneralPlugin">
-    <description>This is a observe_softbus plugin based on cognition.</description>
-  </class>
-</library>
